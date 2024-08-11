@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <thread>
 #include <mutex>
+#include "Logger.hpp"
 #define MAX_LEN 200
 #define NUM_COLORS 6
 
@@ -37,6 +38,10 @@ void handle_client(int client_socket, int id);
 
 int main()
 {
+
+	Log::Logger loggerInst(Log::LEVEL_LOG::DEBUG);
+    LOGGER(Log::LEVEL_LOG::DEBUG,"starting first helper... ");
+
 	int server_socket;
 	if((server_socket=socket(AF_INET,SOCK_STREAM,0))==-1)
 	{

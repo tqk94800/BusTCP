@@ -1,0 +1,3 @@
+[submodule "LibCommon/Logger"]
+	path = LibCommon/Logger
+	url = git@github.com:tqk94800/Logger.git
